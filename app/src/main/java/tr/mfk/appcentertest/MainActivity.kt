@@ -2,6 +2,7 @@ package tr.mfk.appcentertest
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import com.microsoft.appcenter.AppCenter
 import com.microsoft.appcenter.analytics.Analytics
 import com.microsoft.appcenter.crashes.Crashes
@@ -12,8 +13,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         AppCenter.start(
-            application, "9c39983d-7ac7-4b1c-bcb8-1a0d03e8e41b",
+            application, "5d3cc5f8-69bf-417f-b24b-a3f69d949f4e",
             Analytics::class.java, Crashes::class.java
         )
+
     }
 }
