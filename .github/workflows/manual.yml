@@ -3,7 +3,7 @@ name: AppCenter Build and Deploy
 on:
   push:
     branches:
-      - 'main' # "feature/" ile başlayan tüm branch'ler için çalışır.
+      - 'main*' # "feature/" ile başlayan tüm branch'ler için çalışır.
 
 jobs:
   build-and-deploy:
