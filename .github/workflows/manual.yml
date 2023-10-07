@@ -13,6 +13,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Install AppCenter CLI
+        run: npm install -g appcenter-cli
+
           
       - name: Build and Deploy to AppCenter
         run: |
