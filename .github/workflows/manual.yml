@@ -26,4 +26,4 @@ jobs:
           
       - name: Request
         run: |
-          curl -X POST "https://api.appcenter.ms/v0.1/apps/mfkcompany/appcenterTest/branches/bugra/config" -H  "accept: application/json" -H  "X-API-Token: 550e34bb7e424d8da861de8f8272d29890c55fd3" -H  "Content-Type: application/json" --data '{"cloneFromBranch": "main"}'
+          curl -X POST "https://api.appcenter.ms/v0.1/apps/mfkcompany/appcenterTest/branches/mamit/config" -H  "accept: application/json" -H  "X-API-Token: 550e34bb7e424d8da861de8f8272d29890c55fd3" -H  "Content-Type: application/json" --data '{"cloneFromBranch": "main"}'
