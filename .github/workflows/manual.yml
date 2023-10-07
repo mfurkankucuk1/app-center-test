@@ -23,6 +23,7 @@ jobs:
           # Örneğin:
           appcenter login --token 38f179e68a5c9bc9f28a0222cec6a4578af6ff74
           appcenter apps list
+          env
           
       - name: Request Appcenter For Config Clone
         run: |
