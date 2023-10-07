@@ -21,5 +21,5 @@ jobs:
         run: |
           # AppCenter'a yükleme komutlarını burada çalıştırın.
           # Örneğin:
-          appcenter login --token 5924f27c13f242f8cc58cd5c8b0438ba8a4ca874
+          appcenter login --token 38f179e68a5c9bc9f28a0222cec6a4578af6ff74
           appcenter apps list
