@@ -1,0 +1,32 @@
+name: AppCenter Build and Deploy
+
+on:
+  push:
+    branches:
+      - 'main*' # "feature/" ile başlayan tüm branch'ler için çalışır.
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install AppCenter CLI
+        run: npm install -g appcenter-cli
+
+          
+      - name: Build and Deploy to AppCenter
+        run: |
+          # AppCenter'a yükleme komutlarını burada çalıştırın.
+          # Örneğin:
+          appcenter login --token 38f179e68a5c9bc9f28a0222cec6a4578af6ff74
+          appcenter apps list
+          echo ${GITHUB_REF##*/}
+          echo ${GITHUB_REF_NAME}
+
+          
+      - name: Request Appcenter For Config Clone
+        run: |
+          curl -X POST "https://api.appcenter.ms/v0.1/apps/mfkcompany/appcenterTest/branches/test/config" -H  "accept: application/json" -H  "X-API-Token: 550e34bb7e424d8da861de8f8272d29890c55fd3" -H  "Content-Type: application/json" --data '{"cloneFromBranch": "main"}'
